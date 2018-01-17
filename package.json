@@ -1,0 +1,49 @@
+{
+  "name": "btc-markets-ws-api",
+  "version": "1.0.0",
+  "description": "BTC Markets Websocket Client",
+  "author": "Matthew Mckenzie",
+  "license": "MIT",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "jest",
+    "prepublishOnly": "yarn && gulp compile:publish"
+  },
+  "jest": {
+    "verbose": false,
+    "testPathIgnorePatterns": [
+      "<rootDir>/src/",
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "files": [
+    "build/index.js"
+  ],
+  "devEngines": {
+    "node": "8.x || 9.x"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.37",
+    "@babel/preset-env": "^7.0.0-beta.37",
+    "babel-eslint": "^8.2.1",
+    "babel-plugin-autobind-class-methods": "^5.0.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "dotenv": "^4.0.0",
+    "eslint": "^4.15.0",
+    "eslint-plugin-jest": "^21.6.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0-beta.0",
+    "gulp-eslint": "^4.0.1",
+    "gulp-jsdoc3": "^1.0.1",
+    "gulp-sourcemaps": "^2.6.3",
+    "jest": "^22.1.1"
+  },
+  "dependencies": {
+    "socket.io-client": "^2.0.4"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azerothian/btc-markets-ws-api"
+  }
+}

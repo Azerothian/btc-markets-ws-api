@@ -9,7 +9,7 @@ This exposes the websocket events available from the [BTC Markets API](https://g
 
 ### Install
 
-`npm install btc-markets-ws-api`
+`yarn add btc-markets-ws-api`
 
 ### Documentation
 
@@ -19,13 +19,22 @@ This exposes the websocket events available from the [BTC Markets API](https://g
 
 ```js
 import BTCMarketsWS from "btc-markets-ws-api";
-(async() => {
-    try {
-        const client = new BTCMarketsWS();
+const wsClient = new BTCMarketsWS();
 
-    } catch (err) {
-        console.log(err);
-    }
+wsClient.subscribeTicker("BTC", "AUD");
+wsClient.subscribeOrderBook("BTC", "AUD");
+wsClient.subscribeTradeEvents("BTC", "AUD");
+
+wsClient.on("ticker", (tickerResult) => {
+  console.log("ticker", tickerResult);
+});
+wsClient.on("orderbook", (orderbookResult) => {
+  console.log("orderbook", orderbookResult);
+});
+wsClient.on("trade", (tradeResult) => {
+  console.log("trade", tradeResult);
+});
+wsClient.connect();
 
 })();
 

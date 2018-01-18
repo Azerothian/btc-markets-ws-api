@@ -1,6 +1,6 @@
 {
   "name": "btc-markets-ws-api",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "BTC Markets Websocket Client",
   "author": "Matthew Mckenzie",
   "license": "MIT",
